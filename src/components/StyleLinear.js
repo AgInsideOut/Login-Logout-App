@@ -18,7 +18,7 @@ const StylelinearRoot = styled.div`position: relative;
   text-align: center;
   font-size: var(--body-small-size);
   color: var(--black);
-  font-family: var(--body);
+  font-family: var(--link);
   position: ${(p) => p.styleLinearPosition}
   background-color: ${(p) => p.styleLinearBackgroundColor}
   margin: ${(p) => p.styleLinearMargin}

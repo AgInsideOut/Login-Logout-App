@@ -27,9 +27,9 @@ const ValueplaceholderRoot = styled.div`position: relative;
   height: 40px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--body-size);
+  font-size: var(--link-size);
   color: var(--dark-gray);
-  font-family: var(--body);
+  font-family: var(--link);
   position: ${(p) => p.valuePlaceholderPosition}
   margin: ${(p) => p.valuePlaceholderMargin}
   top: ${(p) => p.valuePlaceholderTop}

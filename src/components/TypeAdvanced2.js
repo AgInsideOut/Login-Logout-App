@@ -47,7 +47,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  font-family: var(--body);
+  font-family: var(--link);
 `;
 const TypeadvancedRoot = styled.div`
   position: absolute;
@@ -67,7 +67,7 @@ const TypeadvancedRoot = styled.div`
   justify-content: flex-start;
   gap: var(--gap-5xl);
   text-align: left;
-  font-size: var(--body-size);
+  font-size: var(--link-size);
   color: var(--black);
   font-family: var(--font-roboto);
 `;

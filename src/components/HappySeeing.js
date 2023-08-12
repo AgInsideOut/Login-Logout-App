@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import StatePlaceholderIconNo from "./StatePlaceholderIconNo";
-import StyleLinear from "./StyleLinear";
 
 const TypeadvancedChild = styled.div`
   align-self: stretch;
@@ -12,7 +10,7 @@ const TypeadvancedItem = styled.div`
   top: 29px;
   left: 203px;
   width: 122px;
-  z-index: 3;
+  z-index: 1;
 `;
 const Footer = styled.div`
   margin: 0 !important;
@@ -20,17 +18,59 @@ const Footer = styled.div`
   top: 451px;
   left: 24px;
   width: 400px;
-  z-index: 4;
+  z-index: 2;
 `;
 const Message = styled.b`
   position: relative;
   line-height: 24px;
 `;
+const Message1 = styled.div`
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  width: 357px;
+  height: 33px;
+  flex-shrink: 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+const MessageParent = styled.div`
+  width: 114px;
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+const TypeadvancedInner = styled.div`
+  margin: 0 !important;
+  position: absolute;
+  top: 218px;
+  left: 325px;
+  width: 352px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+`;
+const MessageGroup = styled.div`
+  margin: 0 !important;
+  position: absolute;
+  top: 289px;
+  left: 444px;
+  width: 114px;
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 4;
+`;
 const MessageWrapper = styled.div`
   margin: 0 !important;
   position: absolute;
   top: 0px;
-  left: -34px;
+  left: 28px;
   width: 269px;
   display: flex;
   flex-direction: column;
@@ -38,11 +78,11 @@ const MessageWrapper = styled.div`
   justify-content: flex-start;
   z-index: 0;
 `;
-const TypeadvancedInner = styled.div`
+const FrameDiv = styled.div`
   margin: 0 !important;
   position: absolute;
   top: 78px;
-  left: 424px;
+  left: 353px;
   width: 141px;
   display: flex;
   flex-direction: row;
@@ -67,53 +107,34 @@ const TypeadvancedRoot = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-5xl);
-  text-align: center;
+  text-align: left;
   font-size: var(--link-size);
   color: var(--black);
   font-family: var(--font-roboto);
 `;
-const TypeAdvanced = () => {
+const HappySeeing = () => {
   return (
     <TypeadvancedRoot>
       <TypeadvancedChild />
-      <StatePlaceholderIconNo
-        displayText="Email"
-        statePlaceholderIconNoPosition="absolute"
-        statePlaceholderIconNoWidth="400px"
-        statePlaceholderIconNoMargin="0 !important"
-        statePlaceholderIconNoTop="155px"
-        statePlaceholderIconNoLeft="294px"
-        statePlaceholderIconNoFlexShrink="0"
-        statePlaceholderIconNoZIndex="1"
-      />
-      <StatePlaceholderIconNo
-        displayText="Username"
-        statePlaceholderIconNoPosition="absolute"
-        statePlaceholderIconNoWidth="400px"
-        statePlaceholderIconNoMargin="0 !important"
-        statePlaceholderIconNoTop="219px"
-        statePlaceholderIconNoLeft="294px"
-        statePlaceholderIconNoFlexShrink="0"
-        statePlaceholderIconNoZIndex="2"
-      />
       <TypeadvancedItem />
       <Footer />
       <TypeadvancedInner>
-        <MessageWrapper>
-          <Message>RECOVER YOUR LOGIN DATA</Message>
-        </MessageWrapper>
+        <MessageParent>
+          <Message>FIRST NAME</Message>
+          <Message1>FIRST NAME</Message1>
+        </MessageParent>
       </TypeadvancedInner>
-      <StyleLinear
-        buttonText="Submit"
-        styleLinearPosition="absolute"
-        styleLinearBackgroundColor="#d9d9d9"
-        styleLinearMargin="0 !important"
-        styleLinearTop="338px"
-        styleLinearLeft="615px"
-        styleLinearZIndex="6"
-      />
+      <MessageGroup>
+        <Message>LAST NAME</Message>
+        <Message1>LAST NAME</Message1>
+      </MessageGroup>
+      <FrameDiv>
+        <MessageWrapper>
+          <Message>{`HI {USER} HAPPY TO SEE YOU !`}</Message>
+        </MessageWrapper>
+      </FrameDiv>
     </TypeadvancedRoot>
   );
 };
 
-export default TypeAdvanced;
+export default HappySeeing;
