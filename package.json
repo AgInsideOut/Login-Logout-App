@@ -4,6 +4,7 @@
   "description": "Note: Please ensure you have installed <code><a href=\"https://nodejs.org/en/download/\">nodejs</a></code>",
   "main": "index.js",
   "dependencies": {
+    "@builder.io/react": "^3.0.13",
     "abab": "^2.0.6",
     "accepts": "^1.3.8",
     "acorn": "^8.10.0",

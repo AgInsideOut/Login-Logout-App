@@ -46,6 +46,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<TypeAdvanced />} />
+      <Route path="/" exact component={AccessAccount} />
+      <Route path="/profile" component={ProfilePage} />
+      <Route path="/recovery" component={ProfileRecovery} />
     </Routes>
   );
 }
