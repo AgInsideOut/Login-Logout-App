@@ -1,9 +1,12 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "./global";
+import StyleLinear from './components/StyleLinear';
+
 
 const container = document.getElementById("root");
 const root = createRoot(container);
