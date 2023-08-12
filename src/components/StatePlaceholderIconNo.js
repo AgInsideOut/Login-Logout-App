@@ -19,9 +19,9 @@ const StateplaceholderIconnoRoot = styled.div`position: relative;
   height: 40px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--body-size);
+  font-size: var(--link-size);
   color: var(--dark-gray);
-  font-family: var(--body);
+  font-family: var(--link);
   position: ${(p) => p.statePlaceholderIconNoPosition}
   width: ${(p) => p.statePlaceholderIconNoWidth}
   margin: ${(p) => p.statePlaceholderIconNoMargin}

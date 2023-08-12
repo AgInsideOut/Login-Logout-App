@@ -76,7 +76,7 @@ const TypeadvancedRoot = styled.div`
   justify-content: flex-start;
   gap: var(--gap-5xl);
   text-align: left;
-  font-size: var(--body-size);
+  font-size: var(--link-size);
   color: var(--black);
   font-family: var(--font-roboto);
 `;
