@@ -1,0 +1,116 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stars-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vw * 1117 / 1728); /* Maintain aspect ratio */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.message-container,
+.message1,
+.typeadvanced-child {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+.message1 {
+  left: 35px;
+  line-height: 24px;
+  display: inline-block;
+}
+.message-container,
+.typeadvanced-child {
+  left: 28px;
+  width: 269px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.typeadvanced-child {
+  top: 119px;
+  left: 354px;
+  width: 141px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.chip1 {
+  cursor: pointer;
+}
+.footer,
+.typeadvanced1 {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+}
+.footer {
+  margin: 0 !important;
+  top: 318px;
+  left: 303px;
+  width: 400px;
+  flex-direction: row;
+  padding: var(--padding-base) 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+.typeadvanced1 {
+  top: 19px;
+  left: 20px;
+  border-radius: var(--br-5xs);
+  border: 2px solid var(--black);
+  width: 760px;
+  height: 436px;
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-5xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.typelinear-property-2like {
+  position: absolute;
+  top: 119px;
+  left: 89px;
+  width: 269px;
+  height: 269px;
+}
+.project-card1 {
+  position: absolute;
+  top: 317px;
+  left: calc(50% - 401px);
+  border-radius: var(--br-8xs);
+  border: 1px dashed var(--white);
+  box-sizing: border-box;
+  width: 803px;
+  height: 484px;
+  overflow: hidden;
+}
+.profilepage {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  opacity: 0;
+  text-align: left;
+  font-size: var(--body-size);
+  color: var(--white);
+  font-family: var(--font-roboto);
+}
+.profilepage.animate {
+  animation: 1s ease 0s 1 normal forwards fade-in;
+}

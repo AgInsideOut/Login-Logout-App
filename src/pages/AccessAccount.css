@@ -1,0 +1,220 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stars-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Use percentage or vw unit */
+  height: 100%; /* Use percentage or vh unit */
+  overflow: hidden;
+  z-index: -1; /* Background behind other content */
+}
+
+.message2 {
+  position: relative;
+  line-height: 24px;
+}
+.message-frame {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 269px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 0;
+}
+.frame-div {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.date-field {
+  position: absolute;
+  margin: 0 !important;
+  top: 72px;
+  left: 264px;
+  z-index: 1;
+}
+.text-field,
+.text-field1,
+.text-field2,
+.text-field3,
+.text-field4 {
+  background-color: transparent;
+  position: absolute;
+  margin: 0 !important;
+  top: 136px;
+  left: 24px;
+  z-index: 2;
+}
+.text-field1,
+.text-field2,
+.text-field3,
+.text-field4 {
+  top: 200px;
+  z-index: 3;
+}
+.text-field2,
+.text-field3,
+.text-field4 {
+  top: 264px;
+  z-index: 4;
+}
+.text-field3,
+.text-field4 {
+  top: 328px;
+  z-index: 5;
+}
+.text-field4 {
+  top: 392px;
+  z-index: 6;
+}
+.chip2 {
+  cursor: pointer;
+}
+.footer1,
+.message3 {
+  position: absolute;
+  margin: 0 !important;
+  left: 24px;
+}
+.footer1 {
+  top: 451px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base) 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 7;
+}
+.message3 {
+  top: 81px;
+  line-height: 24px;
+  z-index: 8;
+}
+.project-card2,
+.typeadvanced2 {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.typeadvanced2 {
+  top: 19px;
+  left: 20px;
+  border-radius: var(--br-5xs);
+  border: 2px solid var(--black);
+  width: 448px;
+  height: 524px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-5xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.project-card2 {
+  top: 276px;
+  left: 346px;
+  border-radius: var(--br-8xs);
+  border: 1px dashed var(--white);
+  width: 488px;
+  height: 566px;
+}
+.typeadvanced-inner1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.text-field5 {
+  background-color: transparent;
+  position: relative;
+}
+.footer2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base) 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.content,
+.message5 {
+  align-self: stretch;
+  cursor: pointer;
+}
+.message5 {
+  text-decoration: underline;
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  color: inherit;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: var(--body-small);
+}
+.project-card3,
+.typeadvanced3 {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.typeadvanced3 {
+  top: 19px;
+  left: 20px;
+  border-radius: var(--br-5xs);
+  border: 2px solid var(--black);
+  width: 448px;
+  height: 336px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-5xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.project-card3 {
+  top: 276px;
+  left: 894px;
+  border-radius: var(--br-8xs);
+  border: 1px dashed var(--white);
+  width: 488px;
+  height: 377px;
+}
+.accessaccount {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  opacity: 0;
+  text-align: left;
+  font-size: var(--body-size);
+  color: var(--white);
+  font-family: var(--font-roboto);
+}
+.accessaccount.animate {
+  animation: 1s ease 0s 1 normal forwards fade-in;
+}

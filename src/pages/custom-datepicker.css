@@ -1,0 +1,14 @@
+/* custom-datepicker.css */
+
+/* Add custom styles for the DatePicker */
+.react-datepicker__input-container {
+    position: relative;
+  }
+  
+  .react-datepicker-wrapper {
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    z-index: 1000;
+  }
+  
