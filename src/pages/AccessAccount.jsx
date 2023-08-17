@@ -47,7 +47,7 @@ const AccessAccount = () => {
   const handleRegistrationSubmit = useCallback((event) => {
     event.preventDefault();
     // Logic for registration (if needed)
-    navigate("/profilepage");
+    navigate("/profile");
   }, [navigate]);
   // Login
 
@@ -58,9 +58,10 @@ const AccessAccount = () => {
   }, []);
 
   const onContentContainerClick = useCallback(() => {
+    navigate("/recovery");
     window.location.href =
       "mailto:vixovi3353@v1zw.com?subject=Password Recovery Request";
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="accessaccount" data-animate-on-scroll>
@@ -138,7 +139,7 @@ const AccessAccount = () => {
                 colorScheme="yellow"
                 rightIcon={<ArrowForwardIcon />}
                 as="a"
-                href="/profilepage"
+                href="/profile"
                 onClick={handleRegistrationSubmit}
               >
                 Sign up
