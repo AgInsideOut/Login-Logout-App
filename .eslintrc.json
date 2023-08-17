@@ -1,0 +1,19 @@
+{
+    "parser": "@babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2015,
+        "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "requireConfigFile": false,
+        "babelOptions": {
+        "presets": ["@babel/preset-react"]
+        }}
+    },
+    "plugins": ["prettier"],
+    "extends": ["prettier", "eslint:recommended", "plugin:prettier/recommended"],
+    "rules": {
+    "prettier/prettier": "error"
+    }
+}
