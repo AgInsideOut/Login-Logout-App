@@ -1,16 +1,44 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Input, Button } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./custom-datepicker.css";
 import "./AccessAccount.css";
+import { useAuth } from "../data/auth-context.js";
 
-const AccessAccount = () => {
-  const navigate = useNavigate();
+const AccessAccount = ({ isAuthenticated, setIsAuthenticated }) => {
+  const { login, register } = useAuth();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [selectedDate, setSelectedDate] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleRegistrationSubmit = useCallback((event) => {
+    event.preventDefault();
+    // GATHER DATA AND CALL REGISTER FUNCTION
+    const userData = {
+      dateOfBirth: selectedDate,
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john.doe@example.com',
+      username,
+      password,
+    };
+    register(userData);
+  }, [selectedDate, username, password, register]);
+
+  const handleLoginSubmit = useCallback((event) => {
+    event.preventDefault();
+    login(username, password);
+    setIsAuthenticated(true);
+  }, [username, password, login]);
+
+  const onContentContainerClick = useCallback(() => {
+    window.location.href =
+      "mailto:vixovi3353@v1zw.com?subject=Password Recovery Request";
+  }, []);
+
 
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -41,27 +69,6 @@ const AccessAccount = () => {
       }
     };
   }, []);
-
-  // Registration
-
-  const handleRegistrationSubmit = useCallback((event) => {
-    event.preventDefault();
-    // Logic for registration (if needed)
-    navigate("/profile");
-  }, [navigate]);
-  // Login
-
-  const handleLoginSubmit = useCallback((event) => {
-    event.preventDefault();
-    // Logic for handling login (for the purpose of this homework, assume successful login)
-    setIsLoggedIn(true);
-  }, []);
-
-  const onContentContainerClick = useCallback(() => {
-    navigate("/recovery");
-    window.location.href =
-      "mailto:vixovi3353@v1zw.com?subject=Password Recovery Request";
-  }, [navigate]);
 
   return (
     <div className="accessaccount" data-animate-on-scroll>
@@ -121,6 +128,8 @@ const AccessAccount = () => {
               width="400px"
               focusBorderColor="#eac756"
               placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               w="400px"
             />
             <Input
@@ -129,6 +138,8 @@ const AccessAccount = () => {
               width="400px"
               focusBorderColor="#eac756"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               w="400px"
             />
             <div className="footer1">
@@ -139,7 +150,7 @@ const AccessAccount = () => {
                 colorScheme="yellow"
                 rightIcon={<ArrowForwardIcon />}
                 as="a"
-                href="/profile"
+                href="/profilepage"
                 onClick={handleRegistrationSubmit}
               >
                 Sign up
@@ -165,6 +176,8 @@ const AccessAccount = () => {
               width="400px"
               focusBorderColor="#eac756"
               placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               w="400px"
             />
             <Input
@@ -173,6 +186,8 @@ const AccessAccount = () => {
               width="400px"
               focusBorderColor="#eac756"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               w="400px"
             />
             <div className="footer2">

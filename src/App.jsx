@@ -17,49 +17,40 @@ const App = () => {
   const location = useLocation();
   const pathname = location.pathname;
 
+  // MANAGING AUTH STATUS
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // LOGOUT FUNCTION => SETTING isAuthenticated TO FALSE
+  const logout = () => {
+    setIsAuthenticated(false);
+  };
+
   useEffect(() => {
     if (action !== "POP") {
       window.scrollTo(0, 0);
     }
   }, [action, pathname]);
 
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/profile":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/recovery":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-
   return (
     <Routes>
-      <Route path="/" element={<AccessAccount />} />
-      <Route path="/profile" element={<ProfilePage />} />
+      <Route
+        path="/"
+        element={
+          <AccessAccount
+            isAuthenticated={isAuthenticated}
+            setIsAuthenticated={setIsAuthenticated}
+          />
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProfilePage
+            isAuthenticated={isAuthenticated}
+            logout={logout}
+          />
+        }
+      />
       <Route path="/recovery" element={<ProfileRecovery />} />
     </Routes>
   );
