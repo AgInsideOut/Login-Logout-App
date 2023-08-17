@@ -1,9 +1,8 @@
 {
-  "name": "homework3",
-  "version": "0.1.0",
+  "name": "hw3",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@auth0/auth0-react": "^2.2.0",
     "@chakra-ui/icons": "^2.0.8",
     "@chakra-ui/react": "^2.2.6",
     "@emotion/cache": "^11.11.0",
@@ -13,29 +12,30 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^29.5.0",
-    "@types/node": "^16.11.14",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "express": "^4.18.2",
     "framer-motion": "^7.1.0",
-    "jsonwebtoken": "^9.0.1",
+    "node_modules-path": "^2.0.7",
+    "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sqlite": "^5.0.1",
     "sqlite3": "^5.1.6",
-    "web-vitals": "^2.1.4"
+    "util": "^0.12.5",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.88.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api": "react-scripts api"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "root": true
@@ -56,7 +56,35 @@
     "@babel/core": "^7.22.10",
     "@babel/eslint-parser": "^7.22.10",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.47.0"
+    "@babel/preset-react": "^7.22.5",
+    "@types/node": "^20.5.0",
+    "@webpack-cli/generators": "^3.0.7",
+    "assert": "^2.0.0",
+    "browserify-fs": "^1.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "html-webpack-plugin": "^5.5.3",
+    "https-browserify": "^1.0.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": "Homework3",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "stream": false
   }
 }
