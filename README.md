@@ -1,4 +1,4 @@
-  # Homework3
+  # Homework 3
 
   To preview and run the project on your device:
   1) Download the project folder `hw3`
