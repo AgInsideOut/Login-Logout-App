@@ -1,6 +1,6 @@
   # Login-Logout-App
 
-  To preview the project onine:
+  To preview the project online:
   1) Visit: https://aginsideout.github.io/Login-Logout-App/
 
   To run the project on your device:
