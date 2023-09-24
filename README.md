@@ -1,6 +1,9 @@
-  # Homework 3
+  # Login-Logout-App
 
-  To preview and run the project on your device:
+  To preview the project onine:
+  1) Visit: https://aginsideout.github.io/Login-Logout-App/
+
+  To run the project on your device:
   1) Download the project folder `hw3`
   1) Open `hw3` directory in vscode
   2) In the terminal, run `npm install`
